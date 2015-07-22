@@ -1,0 +1,16 @@
+/*set node's position
+position:absolute, static, fixed, relative
+*/
+
+element {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+}
+/*
+the same in js:
+element.style.position = "absolute";
+element.style.left = "100px";
+element.style.top = "50px";
+*/
+

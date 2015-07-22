@@ -1,0 +1,7 @@
+#slideshow {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    /*裁剪*/
+    overflow: hidden;
+}

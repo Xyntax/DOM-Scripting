@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+1 预留退路：如果用户禁用了js，链接还能正常显示吗？(href)
+2 分离js：行为层与结构层真的分开且互不干扰吗？(onclick)
+3 向后兼容：js代码中检测了浏览器的函数支持吗？(if(!xxx)return)
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ImageGallery</title>
+
+    <!--<script type="text/javascript" src="scripts/showPic.js"></script>-->
+    <script type="text/javascript" src="scripts/preparegallery.js"></script>
+    <!--<script type="text/javascript" src="scripts/popUp.js"></script> 测试弹窗脚本-->
+    <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
+    <!--<link rel="stylesheet" href="css/.warning.css" type="text/css" media="screen">-->
+
+</head>
+
+<body>
+    <h1>snapshots</h1>
+        <!-- 测试通过链接调用js函数-->
+        <!--<a href="javascript:popUp('http://www.baidu.com');">test 'javascript:'</a>-->
+        <!-- 测试通过onclick调用js函数-->
+        <!--<a href="#" onclick="popUp('http://www.baidu.com');return false">test on click popUp</a>-->
+        <!-- 预留退路:将href地址与popup的url地址设为相同的-->
+        <!--<a href="http://www.baidu.com" onclick="popUp('http://www.baidu.com');return false;">test popup</a>-->
+        <!-- 使用弹窗的标准写法2个-->
+        <!--<a href="http://www.baidu.com" onclick="popUp(this.getAttribute('href'));return false;">test popup</a>-->
+        <!--<a href="http://www.baidu.com" onclick="popUp(this.href);return false;">test popup</a>-->
+        <!-- test warning css-->
+        <!--<p class="warning">Be careful!</p>-->
+    <ul id="imagegallery"><!-- js分离的群体控制，挂钩子-->
+        <li>
+            <!--js分离前(onclick)<a href="images/fireworks.jpg"
+            onclick="showPic(this);return false;" title="A firework display">Firework</a>-->
+            <!--测试js分离(popup)(单个控制)<a href="images/fireworks.jpg"
+            title= "A firework display" class="popup">Fireworks</a>-->
+            <a href="images/fireworks.jpg" title="A firework display">
+                Fireworks</a>
+        </li>
+        <li>
+            <a href="images/coffee.jpg" title="A cup of black coffee">
+                Coffee</a>
+        </li>
+        <li>
+            <a href="images/rose.jpg" title="A red, red rose">
+                Rose</a>
+        </li>
+        <li>
+            <a href="images/bigben.jpg" title="The famous clock">
+                BigBen</a>
+        </li>
+    </ul>
+    <img id="placeholder" src="images/placeholder.gif" alt="my image gallery"/> <!--img：alt 无法显示图片时用来替换的文本-->
+    <p id="description">Choose an image.</p>
+</body>
+</html>

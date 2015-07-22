@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+如果html中代码存在的意义就是为了让js脚本处理，那就把它拿到js里创建(placeholder)
+ parentElement.insertBefore(newElement,targetElement)
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ImageGallery</title>
+    <script type="text/javascript" src="scripts/prepareGallery.js"></script>
+    <script type="text/javascript" src="scripts/preparePlaceholder.js"></script>
+    <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
+</head>
+
+<body>
+    <h1>snapshots</h1>
+    <ul id="imagegallery">
+        <li>
+            <!-- <a>标签中插入<img>标签构成可以点击的缩略图-->
+            <a href="images/fireworks.jpg" title="A firework display">
+                <img src="images/thumbnail_fireworks.jpg" alt="Fireworks"/>
+            </a>
+        </li>
+        <li>
+            <a href="images/coffee.jpg" title="A cup of black coffee">
+                <img src="images/thumbnail_coffee.jpg" alt="Fireworks"/>
+            </a>
+        </li>
+        <li>
+            <a href="images/rose.jpg" title="A red, red rose">
+                <img src="images/thumbnail_rose.jpg" alt="Fireworks"/>
+            </a>
+        </li>
+        <li>
+            <a href="images/bigben.jpg" title="The famous clock">
+                <img src="images/thumbnail_bigben.jpg" alt="Fireworks"/>
+            </a>
+        </li>
+    </ul>
+    <!--在js中处理<img id="placeholder" src="images/placeholder.gif" alt="my image gallery"/> &lt;!&ndash;img：alt 无法显示图片时用来替换的文本&ndash;&gt;-->
+    <!--<p id="description">Choose an image.</p>-->
+</body>
+</html>
