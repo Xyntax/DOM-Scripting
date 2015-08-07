@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 1em 10%;
+    background-image: url(../images/background.gif);
+    background-attachment: fixed;
+    background-position: top left;
+    background-repeat: repeat-x;
+    max-width: 80em;
+}
+
+#header {
+    background-image: url(../images/guitarist.gif);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    border-width: .1em;
+    border-style: solid;
+    border-bottom-width: 0;
+}
+
+#navigation {
+    border-image: url(../images/navbar.gif);
+    background-position: bottom left;
+    background-repeat: repeat-x;
+    border-width: .1em;
+    border-style: solid;
+    border-bottom-width: 0;
+    border-top-width: 0;
+    padding-left: 10%;
+}
+#navigation ul{
+    width: 100%;
+    overflow: hidden;
+    border-left-width: .1em;
+    border-left-style: solid;
+}
+#navigation li {
+    display: inline;
+}
+#navigation li a{
+    display: block;
+    float: left;
+    padding: .5em 2em;
+    border-right: .1em solid;
+}
+#content{
+    border-width: .1em;
+    border-style: solid;
+    border-top-width: 0;
+    padding: 2em 10%;
+    line-height: 1.8em;
+}
